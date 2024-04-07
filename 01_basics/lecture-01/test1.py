@@ -207,7 +207,7 @@ df = pd.DataFrame(data); # create a DataFreame on whole data
 # print(df.loc[0:2]) # print 0,1,2 index data
 # d1 = df.iloc[0] # at 0 index
 
-# d1 = df.iloc[[0,1]] # ai 0,1 index 
+d1 = df.iloc[[0,1]] # ai 0,1 index 
 # d1 = df.iloc[:,[0,1]] # all data and 0,1 column
 # d1 = df.iloc[1,[0,1]] # data on first column and column index 0 and 1
 
