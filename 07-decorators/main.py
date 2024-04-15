@@ -44,24 +44,51 @@
 # Problem 2: Debugging Function Calls
 # Problem: Create a decorator to print the function name and the values of its arguments every time the function is called.
 
-def debug(func):
-    def wrapper(*args,**kwargs):
-        args_value = ', '.join(str(arg) for arg in args);
-        kwargs_value = ', '.join(f'{k} : {v}' for k,v in kwargs.items())
-        print(f'function name {func.__name__} arguments {args_value} keywords argument {kwargs_value} ')
-        return func(*args,**kwargs);
+# def debug(func):
+#     def wrapper(*args,**kwargs):
+#         args_value = ', '.join(str(arg) for arg in args);
+#         kwargs_value = ', '.join(f'{k} : {v}' for k,v in kwargs.items())
+#         print(f'function name {func.__name__} arguments {args_value} keywords argument {kwargs_value} ')
+#         return func(*args,**kwargs);
     
-    return wrapper;
+#     return wrapper;
 
-@debug
-def greet(name,greeting = "hello"):
-    print(f'{name} , {greeting}')
+# @debug
+# def greet(name,greeting = "hello"):
+#     print(f'{name} , {greeting}')
     
 
-greet("python",greeting='hello ji')
+# greet("python",greeting='hello ji')
 
 
 
 
 # Problem 3: Cache Return Values
 # Problem: Implement a decorator that caches the return values of a function, so that when it's called with the same arguments, the cached value is returned instead of re-executing the function.
+
+import time 
+
+def caches(func):
+    caches_value = {};
+    # print(caches_value)
+    def wrapper(*args):
+        if args in caches_value: # check args in caches dict if availabel then simple return that args value
+            return caches_value[args];
+        result = func(*args)
+        # if not than call the function create new cache key value
+        caches_value[args] = result;
+        return result;
+    # and return 
+    return wrapper;
+# return whole return 
+        
+
+@caches
+def log_func(a,b):
+    time.sleep(4);
+    return a + b;
+
+
+print(log_func(1,2))
+print(log_func(1,2))
+print(log_func(3,3))
