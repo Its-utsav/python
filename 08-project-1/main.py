@@ -20,24 +20,43 @@ def save_helper(videos):
         json.dump(videos,file)
 
 def list_of_videos(videos):
-    # for index,video in enumerate(videos,start=1):
-    #     print(index)
-    for i in videos:
-        print(i)
+    print('*'*50);   
+    for index,video in enumerate(videos,start=1):    
+        print(f'\n {index} video name: {video['name']} duration {video['time']}');
+    print('*'*50);   
+
  
 def add_video(videos):
     name = input("Enter Video Name : ");
     time = input(f"Enter Duration of {name}: ")
+    print(f"video name : {name} and time {time} added. ");
     videos.append({"name": name,"time":time})
     save_helper(videos)
      
 def update_video_details(videos):
-    pass;
+    list_of_videos(videos);
+    index = int(input("Enter the video number to update video details: "));
+    
+    if 1<=index <= len(videos):
+        name = input("Enter a new video name: ");
+        time = input("Enter a new video time: ");        
+        
+        videos[index-1] = {'name':name,'time':time};
+        save_helper(videos)
+    else:
+        print("Invalid Index selected");
+        
     
 def delete_video(videos):
-    pass;
-
-
+    list_of_videos(videos);
+    index = int(input("Enter the video number to delete: "));
+    
+    if 1<= index <=len(videos):
+        print(f'video at {index} is deleted .');
+        del videos[index-1]
+        save_helper(videos)
+    else:
+        print("invalid number");
 
 def main():
     videos = load_data()
