@@ -1,5 +1,5 @@
 import sqlite3
-from tabulate import tabulate   ## run pip install tabulate
+# from tabulate import tabulate   ## run pip install tabulate
 
 con = sqlite3.connect('data.db');
 cursor = con.cursor();
@@ -22,7 +22,7 @@ def list_videos():
         # for row in rows:
         #     print(row)
         table = rows
-        print(tabulate(table, headers=['id','name','time'], tablefmt='fancy_grid'))
+        # print(tabulate(table, headers=['id','name','time'], tablefmt='fancy_grid'))
     else:
         print("No data in the table");
      
