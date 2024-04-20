@@ -1,3 +1,4 @@
+# youtube manager project with DB
 import sqlite3
 # from tabulate import tabulate   ## run pip install tabulate
 
@@ -19,9 +20,9 @@ def list_videos():
     total_data = len(rows)
     print(total_data)
     if total_data > 0:
-        # for row in rows:
-        #     print(row)
-        table = rows
+        for row in rows:
+            print(row)
+        # table = rows
         # print(tabulate(table, headers=['id','name','time'], tablefmt='fancy_grid'))
     else:
         print("No data in the table");
