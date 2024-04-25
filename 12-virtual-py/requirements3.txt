@@ -1,0 +1,4 @@
+dnspython==2.6.1
+numpy==1.26.4
+pip==24.0
+pymongo==4.7.0
