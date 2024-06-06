@@ -4,12 +4,12 @@ import random
 
 def main():
     print("Welcome to the KYA BANGE CODER")
-    maxQuestion = int(input("Enter max question number")); # for question max
+    maxQuestion = int(input("Enter max question number")); # for max question 
     try:
         URL = f"https://opentdb.com/api.php?amount={maxQuestion}";
         # https://opentdb.com/api.php?amount=10;
     except:
-        raise Exception("UNABLE TO LOAD DATA FROM API "); # if data not receviv
+        raise Exception("UNABLE TO LOAD DATA FROM API "); # if data not received
     
     res: list = requests.get(URL).json();
     quizData = res["results"];
@@ -27,7 +27,7 @@ def main():
                 all_ans.append(wrong_ans);
 
             random.shuffle(all_ans);
-            print(correctAns, all_ans);
+            # print(correctAns, all_ans);
 
             print(f"{question} {current_question}");
             print("---options---");
