@@ -101,3 +101,5 @@
 
 s = 'Hello';
 print(min(s))
+
+print('Hello from Ubuntu Linux')
