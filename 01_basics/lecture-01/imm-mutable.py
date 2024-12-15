@@ -1,15 +1,15 @@
 # in python(just like JavaScript) everything is object (only few left)
 
-# mutable Datatypes (chageable at specific location and location can be index , position number)
+# mutable Datatypes (changeable at specific location and location can be index , position number)
 # List  
 #  set 
-# Disctionary
+# Dictionary
 # bytearray
 # array
 
-# immutable Datatypes (can not be changable at specific location but following datatypes can be reassign)
+# immutable Datatypes (can not be changeable at specific location but following datatypes can be reassign)
 
-#  intger ,floating point number
+#  integer ,floating point number
 #  boolean
 # strings
 # tuples

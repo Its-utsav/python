@@ -1,4 +1,4 @@
-# Data-types / Objcet types
+# Data-types / Object types
 
 - Numbers : 1234 , 3.14 ,3+4j(complex type),Decimal() etc
 - String : 'hello' , "hello" , "python's" etc

@@ -70,7 +70,7 @@
 #         print(f"you enter {n} , thanks");
 #         break;
 #     else: 
-#         print("invlaid number , Try again");
+#         print("invalid number , Try again");
 
 
 
