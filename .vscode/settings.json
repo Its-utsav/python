@@ -1,5 +1,0 @@
-{
-  "python.analysis.typeCheckingMode": "off",
-  "python.analysis.autoImportCompletions": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
-}

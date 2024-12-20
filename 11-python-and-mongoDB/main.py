@@ -3,12 +3,12 @@
 
 from bson import ObjectId # for updating objectID 
 from pymongo import MongoClient
-# utsavYT27mongoDB
+
 
 
 
 try:
-    client = MongoClient("mongodb+srv://utsav:utsavYT27mongoDB@ytmanager.uctidpk.mongodb.net/ytmanager");
+    client = MongoClient("mongoDBClink");
     #  not a good pass and id expose to the other
 except:
     raise Exception("unable to connect with mongoDB");
