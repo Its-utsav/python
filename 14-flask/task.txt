@@ -1,0 +1,5 @@
+/alltodo -> return all todo done
+/completetodo/todoId -> mark done todo  done
+/createtodo > create a new todo with id and todo content with random and unique id and pending done
+/gettodoinfo/todoId -> get info about todo done
+/updatetodoinfo/todoId -> update todo content with todoId
