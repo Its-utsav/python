@@ -9,7 +9,7 @@
 # # print(max(string));
 # # print(min(string))
 # #  give max and min value as per ASCII value
-# # print(string.replace('a','@',1)); # it repalce old substring with new substring , with specfic count(optional) 
+# # print(string.replace('a','@',1)); # it repalce old substring with new substring , with specfic count(optional)
 
 # # print(string.lower()) # convert and return string into lower case
 # # print(string.upper()) # convert and return string into upper case
@@ -21,7 +21,7 @@
 # print(2**2);
 # print(pow(2,2));
 # if 2**2 == pow(2,2):
-    # print(True);
+# print(True);
 # print(2**3)  # 2 * 2 * 2
 
 
@@ -37,11 +37,8 @@
 
 # membership operator
 
-# print('1' in a); # False because 1 string is not in a 
+# print('1' in a); # False because 1 string is not in a
 # print('1'not in a and 1 in a)
-
-
-
 
 
 # lst:list = [1,2,3,4,5];
@@ -52,7 +49,7 @@
 # # lst.clear() # clear all element from the list with no return value
 
 # # copy_lst = lst;
-# # lst[1]  = 'one'; 
+# # lst[1]  = 'one';
 # # # copy_lst[2]= 'two'
 # # print(copy_lst)
 # # lst.append(lst2)
@@ -86,7 +83,7 @@
 # print(tp.count(1)) # give how many time particular element occure
 # print(tp.index(1)) # give index of an given element
 # tp2 = (2,3,4);
-# tp3 = tp + tp2 # add element 
+# tp3 = tp + tp2 # add element
 
 # print(tp3)
 
@@ -100,34 +97,32 @@
 # set3 = set1 & set2 == set1.intersection(set2) # both are same
 
 
-
 # set1.clear()
 # print(set1) # give set()
 
 # set3 = set1.copy()
 # print(set3); # create a shallow copy
 
-# set1.discard('1') # remove the element from set if given element not exit in set than don't raised error but with remove raised error 
+# set1.discard('1') # remove the element from set if given element not exit in set than don't raised error but with remove raised error
 # set1.remove('1'); # raised KeyError
 # set1.pop(); # remove and return last element from the set
-# print(set1.union(set2)) #update the set and return new set with updated value  
+# print(set1.union(set2)) #update the set and return new set with updated value
 
 # dict
 # key:value pair
 
 me = {
-    "name" : "Utsav",
-    "age":17,
-    "marks" : [1,2,3,4],
-    "isAdult": False,    
+    "name": "Utsav",
+    "age": 17,
+    "marks": [1, 2, 3, 4],
+    "isAdult": False,
 }
 
 
 # adding new item(field)
 
-me['isStudent'] = True;
-
-me['marks'] = 100  # changing the value 
+me["isStudent"] = True
+me["marks"] = 100  # changing the value
 # remove element from dict
 
 # del me["isAdult"]
@@ -192,22 +187,22 @@ import pandas as pd
 
 # print(data)
 
-data ={
-    'name':['utsav','mark','harray'],
-    'age' :[17,23,30],
-    'isStudent' : [True,False,False]
+data = {
+    "name": ["utsav", "mark", "harray"],
+    "age": [17, 23, 30],
+    "isStudent": [True, False, False],
 }
 
-lable = ['name','age','isStudent']
+lable = ["name", "age", "isStudent"]
 
-df = pd.DataFrame(data); # create a DataFreame on whole data
+df = pd.DataFrame(data)  # create a DataFreame on whole data
 # df = pd.DataFrame(data['name']) #create a DataFrame on given column
 
 # print(df.loc[0]) # print at 0 index data
 # print(df.loc[0:2]) # print 0,1,2 index data
 # d1 = df.iloc[0] # at 0 index
 
-d1 = df.iloc[[0,1]] # ai 0,1 index 
+d1 = df.iloc[[0, 1]]  # ai 0,1 index
 # d1 = df.iloc[:,[0,1]] # all data and 0,1 column
 # d1 = df.iloc[1,[0,1]] # data on first column and column index 0 and 1
 

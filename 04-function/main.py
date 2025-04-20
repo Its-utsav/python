@@ -31,9 +31,9 @@ from math import pi
 # def circle_stats(r) -> float:
 #     area = pi * r ** 2;
 #     circumference = 2 * pi * r
-    
+
 #     return area,circumference;
-    
+
 # [a,c] = circle_stats(12)
 # print(round(a,2),c);
 # 5. Default Parameter Value
@@ -41,7 +41,7 @@ from math import pi
 
 # def print_name(name="python"):
 #     return f' Hello {name} 😎';
-    
+
 # print(print_name("utsav"))
 
 # 6. Lambda Function
@@ -70,10 +70,9 @@ from math import pi
 # def lol(**kwargs):
 #     for key,val in kwargs.items():
 #         print(key,val);
-        
+
 
 # lol(name="utsav",age=12)
-
 
 
 # 9. Generator Function with yield
@@ -82,8 +81,8 @@ from math import pi
 # def even_gen(limit):
 #     for i in range(2,limit+1,2):
 #         yield i # return value and keep in mempry
-    
-    
+
+
 # for i in even_gen(10):
 #     print(i)
 
@@ -94,9 +93,5 @@ from math import pi
 # def fact(n:int) -> int:
 #     if n == 1 or n == 0 : return 1;
 #     else: return n * fact(n-1);
-    
+
 # print(fact(5))
-
-
-
-

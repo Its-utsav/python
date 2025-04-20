@@ -17,7 +17,7 @@
 
 # for n in range(1,n+1):
 #     if n % 2==0: sum_of_even_n_num +=n;
-    
+
 # print(f'sum of {n} even number {sum_of_even_n_num}')
 
 # 3. Multiplication Table Printer
@@ -45,7 +45,7 @@
 
 # string = "python";
 # for ch in string:
-#     if string.count(ch) == 1: 
+#     if string.count(ch) == 1:
 #         print("character is ", ch);
 #         break; # because of only first non-repeated character
 
@@ -57,7 +57,7 @@
 # while n > 0:
 #     fact *= n;
 #     n-=1;
-    
+
 # print(fact)
 
 
@@ -66,13 +66,11 @@
 
 # while True:
 #     n = int(input("Enter number b/w 1 to 10"));
-#     if 1 <= n <=10: 
+#     if 1 <= n <=10:
 #         print(f"you enter {n} , thanks");
 #         break;
-#     else: 
+#     else:
 #         print("invalid number , Try again");
-
-
 
 
 # 8. Prime Number Checker
@@ -86,7 +84,7 @@
 #         if (n % num) ==0:
 #             is_prime = False;
 #             break;
-        
+
 # if is_prime:
 #     print(f"{n} is prime number");
 # else:
@@ -107,15 +105,13 @@
 # Problem: Implement an exponential backoff strategy that doubles the wait time between retries, starting from 1 second, but stops after 5 retries.
 
 
-
 import time
 
-wait_time = 1;
-max_retries = 5;
-attempts = 0;
-
+wait_time = 1
+max_retries = 5
+attempts = 0
 while attempts < max_retries:
-    print(f"attempt {attempts+1} - wait time {wait_time}")
-    time.sleep(wait_time);
-    wait_time *= 2;
-    attempts +=1;
+    print(f"attempt {attempts + 1} - wait time {wait_time}")
+    time.sleep(wait_time)
+    wait_time *= 2
+    attempts += 1

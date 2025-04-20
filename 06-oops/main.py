@@ -16,7 +16,7 @@
 # 6. Class Variables
 # Problem: Add a class variable to Car that keeps track of the number of cars created.
 
-# 7. Static Method -> method belongs to class rather than object 
+# 7. Static Method -> method belongs to class rather than object
 # Problem: Add a static method to the Car class that returns a general description of a car.
 
 # 8. Property Decorators
@@ -29,58 +29,58 @@
 # Problem: Create two classes Battery and Engine, and let the ElectricCar class inherit from both, demonstrating multiple inheritance.
 
 # 1. class keyword name must be start with uppercase
-# 2. function defination with __init__ (constructer) only that can use on other 
+# 2. function defination with __init__ (constructer) only that can use on other
 #  3. than any attribute possible
 class Car:
-    count = 0;
-    # here self for current contex for connsection b/w 
-    def __init__(self,brand,model): # object creation
-        self.__brand = brand; # brand become private member
+    count = 0
+
+    # here self for current contex for connsection b/w
+    def __init__(self, brand, model):  # object creation
+        self.__brand = brand  # brand become private member
         # for only this class brand member only can use with __brand
-        self.__model = model;
+        self.__model = model
         # self.count+=1; # way 1 imp
-        Car.count+=1; 
-    
-    # making connsection b/w brand and model attribute 
-    def print_Car_Info(self): # method
-        return f'{self.brand} and {self.__model}'
-    
-    def get_brand(self): # any name posible but use only get_******** 
-        return f'private brand name {self.__brand}'
-    
-    def fuel_type(self): # Polymorphism same same but differnt 
-        return 'Petrol or Diesel';
-    
-    @staticmethod # no need to write self only this method belong to only class
+        Car.count += 1
+
+    # making connsection b/w brand and model attribute
+    def print_Car_Info(self):  # method
+        return f"{self.brand} and {self.__model}"
+
+    def get_brand(self):  # any name posible but use only get_********
+        return f"private brand name {self.__brand}"
+
+    def fuel_type(self):  # Polymorphism same same but differnt
+        return "Petrol or Diesel"
+
+    @staticmethod  # no need to write self only this method belong to only class
     # but WTF @staticmethod - it is decorators it enhnace method functionlity
     def gen_def():
-        return 'car have four tier';
-    
+        return "car have four tier"
+
     @property
     def model(self):
-        return self.__model;
-    
-    
-    
-    
-car1 = Car('Mahindra','Thar');
+        return self.__model
+
+
+car1 = Car("Mahindra", "Thar")
 
 
 # print(car1.print_Car_Info())
 
 
-class ElectricCar(Car): # here car as per para due to inheritances
-    def __init__(self,brand,model,battery_size):
-        super().__init__(brand,model); 
+class ElectricCar(Car):  # here car as per para due to inheritances
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
         # super keyword for accessing Car class with all atribute and methd
-        # __init__ for brand and model attribute 
+        # __init__ for brand and model attribute
         # and take brand and model attribute
         self.battery_size = battery_size
-        
+
     def fuel_type(self):
-        return 'Electric Charge';
-    
-ev_car = ElectricCar('tesla','modelS','100kwh')
+        return "Electric Charge"
+
+
+ev_car = ElectricCar("tesla", "modelS", "100kwh")
 
 # print(ev_car.print_Car_Info())
 # print(ev_car.get_brand())
@@ -92,14 +92,14 @@ ev_car = ElectricCar('tesla','modelS','100kwh')
 
 # ev_car.model = "PYTHON";
 
-# print(ev_car.model) # hmm attributes are re- write able 
-# now we need o protect (STOP) from re write 
+# print(ev_car.model) # hmm attributes are re- write able
+# now we need o protect (STOP) from re write
 # 1. private the attribute
 # 2. create a new method use self and nhsdjhd
 # 3. before new method use @property decoraters
 # 4. now method can use as property
 
-# main goal - no over write 
+# main goal - no over write
 
 # print(ev_car.model)
 
@@ -110,22 +110,23 @@ ev_car = ElectricCar('tesla','modelS','100kwh')
 # 10. Multiple Inheritance
 # Problem: Create two classes Battery and Engine, and let the ElectricCar class inherit from both, demonstrating multiple inheritance.
 
+
 class Battery:
     def bt_into(self):
-        return 'battery info'
+        return "battery info"
+
 
 class Engine:
     def en_info(self):
-        return 'Engine info';
+        return "Engine info"
 
-class ElectricCarTwo(Battery,Engine,Car):
+
+class ElectricCarTwo(Battery, Engine, Car):
     def __init__(self, brand, model):
         super().__init__(brand, model)
-        
-        
-        
-        
-tesla = ElectricCarTwo("tesla",'model X')
+
+
+tesla = ElectricCarTwo("tesla", "model X")
 
 print(tesla.bt_into())
 print(tesla.en_info())

@@ -1,6 +1,6 @@
 # what is decorator :
 #  a function that take argument as function and return that function with modified version of function
- 
+
 # def add_msg(func):
 #     def wrapper():
 #         print("before calling the function");
@@ -13,11 +13,11 @@
 # # simple function
 # def hello():
 #     print("Hello world")
-        
+
 # @add_msg
 # def hello2():
 #     print("Hello World x 2");
-    
+
 # # hello()
 # hello2()
 
@@ -38,8 +38,8 @@
 # @timer
 # def ex_fun(n):
 #     time.sleep(n);
-    
-    
+
+
 # ex_fun(2);
 # Problem 2: Debugging Function Calls
 # Problem: Create a decorator to print the function name and the values of its arguments every time the function is called.
@@ -50,45 +50,50 @@
 #         kwargs_value = ', '.join(f'{k} : {v}' for k,v in kwargs.items())
 #         print(f'function name {func.__name__} arguments {args_value} keywords argument {kwargs_value} ')
 #         return func(*args,**kwargs);
-    
+
 #     return wrapper;
 
 # @debug
 # def greet(name,greeting = "hello"):
 #     print(f'{name} , {greeting}')
-    
+
 
 # greet("python",greeting='hello ji')
-
-
 
 
 # Problem 3: Cache Return Values
 # Problem: Implement a decorator that caches the return values of a function, so that when it's called with the same arguments, the cached value is returned instead of re-executing the function.
 
-import time 
+import time
+
 
 def caches(func):
-    caches_value = {};
+    caches_value = {}
+
     # print(caches_value)
     def wrapper(*args):
-        if args in caches_value: # check args in caches dict if availabel then simple return that args value
-            return caches_value[args];
+        if (
+            args in caches_value
+        ):  # check args in caches dict if availabel then simple return that args value
+            return caches_value[args]
         result = func(*args)
         # if not than call the function create new cache key value
-        caches_value[args] = result;
-        return result;
-    # and return 
-    return wrapper;
-# return whole return 
-        
+        caches_value[args] = result
+        return result
+
+    # and return
+    return wrapper
+
+
+# return whole return
+
 
 @caches
-def log_func(a,b):
-    time.sleep(4);
-    return a + b;
+def log_func(a, b):
+    time.sleep(4)
+    return a + b
 
 
-print(log_func(1,2))
-print(log_func(1,2))
-print(log_func(3,3))
+print(log_func(1, 2))
+print(log_func(1, 2))
+print(log_func(3, 3))

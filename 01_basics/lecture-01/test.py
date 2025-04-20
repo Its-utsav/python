@@ -2,7 +2,6 @@
 # import pandas as pd
 
 
-
 # exam_data = {
 #     'name': ['Rinkesh', 'Aditi', 'Sonu', 'Anishka', 'Hiren', 'Raj', 'Hiren', 'Dev', 'Lalu', 'Jay'],
 #     'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19],
@@ -15,7 +14,6 @@
 
 # print(df.iloc[:3])
 # print(df[['name','score']])
-
 
 
 # import pandas as pd
